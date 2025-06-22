@@ -1,64 +1,43 @@
 return {
-  -- ── Colour-schemes ─────────────────────────────────────────────────────────
-  {
-    "folke/tokyonight.nvim",
-    lazy = false,
-    priority = 1000,
-    config = function()
-      vim.cmd([[colorscheme tokyonight]])
-    end
-  },
+  -- Original themes
+  { "folke/tokyonight.nvim" },
   { "shaunsingh/nord.nvim" },
-  { "olimorris/onedarkpro.nvim", opts = true },
-  {
-    "catppuccin/nvim",
-    name = "catppuccin",
-    opts = {
-      flavour = "mocha",
-      transparent_background = true,
-    },
-    config = function(_, opts)
-      require("catppuccin").setup(opts)
-    end,
-  },
-  { "rebelot/kanagawa.nvim", opts = true },
-  { "ellisonleao/gruvbox.nvim", opts = true },
-  { "rose-pine/neovim", name = "rose-pine", opts = true },
-  { "EdenEast/nightfox.nvim", opts = true },
-  { "Mofiqul/dracula.nvim", opts = true },
-  { "projekt0n/github-nvim-theme", opts = true },
-  { "sainnhe/everforest", opts = true },
-  { "sainnhe/sonokai", opts = true },
-  { "navarasu/onedark.nvim", opts = true },
-  { "Mofiqul/vscode.nvim", opts = true },
-  { "marko-cerovac/material.nvim", opts = true },
-  { "bluz71/vim-nightfly-colors", name = "nightfly", opts = true },
-  { "bluz71/vim-moonfly-colors", name = "moonfly", opts = true },
-  { "rmehri01/onenord.nvim", opts = true },
-  { "Shatur/neovim-ayu", opts = true },
-  { "cpea2506/one_monokai.nvim", opts = true },
+  { "olimorris/onedarkpro.nvim" },
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  { "rebelot/kanagawa.nvim" },
+  { "ellisonleao/gruvbox.nvim" },
 
-  -- ── UI / status-line ──────────────────────────────────────────────────────
+  -- Additional popular themes
+  { "rose-pine/neovim", name = "rose-pine" },
+  { "EdenEast/nightfox.nvim" },
+  { "Mofiqul/dracula.nvim" },
+  { "projekt0n/github-nvim-theme" },
+  { "sainnhe/everforest" },
+  { "sainnhe/sonokai" },
+  { "navarasu/onedark.nvim" },
+  { "Mofiqul/vscode.nvim" },
+  { "marko-cerovac/material.nvim" },
+  { "bluz71/vim-nightfly-colors", name = "nightfly" },
+  { "bluz71/vim-moonfly-colors", name = "moonfly" },
+  { "rmehri01/onenord.nvim" },
+  { "Shatur/neovim-ayu" },
+  { "cpea2506/one_monokai.nvim" },
+
   {
     "nvim-lualine/lualine.nvim",
-    event = "VeryLazy",
-    dependencies = "nvim-tree/nvim-web-devicons",
-    opts = function()
-      return {
-        options = {
-          theme = vim.g.colors_name or "tokyonight",
-          icons_enabled = true,
-          section_separators   = { left = "", right = "" },
-          component_separators = { left = "│", right = "│" },
-        },
-      }
-    end,
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    opts = {
+      options = {
+        theme = "tokyonight",
+        icons_enabled = true,
+        section_separators = { left = "", right = "" },
+        component_separators = { left = "│", right = "│" },
+      },
+    },
   },
 
-  -- ── Fuzzy finder ───────────────────────────────────────────────────────────
   {
     "nvim-telescope/telescope.nvim",
-    cmd = "Telescope",
-    dependencies = "nvim-lua/plenary.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
   },
 }
