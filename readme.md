@@ -19,10 +19,15 @@ A sleek and personalized Neovim setup crafted for **productivity**, **aesthetics
 
 ```bash
 # Clone the config
-git clone https://github.com/Aman-m01/nvim-config.git ~/.config/nvim
+git clone https://github.com/Aman-m01/nvim-config.git ~/.config/nvim && nvim
 
 # Optional: remove .git and assets to clean up
 rm -rf ~/.config/nvim/.git ~/.config/nvim/assets
+
+# Uninstall
+rm -rf ~/.config/nvim
+rm -rf ~/.local/state/nvim
+rm -rf ~/.local/share/nvim
 
 ```
 
