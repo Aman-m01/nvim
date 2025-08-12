@@ -23,9 +23,9 @@ if not pcall(require, "lazy") then
   vim.cmd.quit()
 end
 
-
-
-
+-- Ensure RTP warning is disabled after lazy setup
+vim.g.experimental_check_rtp = false
+vim.g.experimental_check_rtp_message = false
 
 require "lazy_setup"
 require "polish"
