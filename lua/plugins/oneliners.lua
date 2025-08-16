@@ -77,7 +77,7 @@ return {
       keymaps = {
         accept_suggestion = "<C-l>",     -- Ctrl+l
       },
-      ignore_filetypes = { "cpp" },
+      ignore_filetypes = {  }, -- remove cpp from cpp filetype to enable cpp completion
       color = {
         suggestion_color = "#808080",
         cterm = 244,
